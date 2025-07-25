@@ -89,7 +89,7 @@ docker run --rm ^
 >📤 Output: challenge1b_output.json in the same collection folder.
 >➡️ Repeat for Collection 2 and Collection 3 by changing the volume mount path.
 
-📦 Folder Structure
+### 📦 Folder Structure
 ```
 Adobe-India-Hackathon25/
 ├── Challenge_1a/
