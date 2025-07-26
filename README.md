@@ -46,11 +46,12 @@ docker build --platform linux/amd64 -t challenge1a .
 
  Run the container
 ```
-docker run --rm ^
-  -v "%cd%\sample_dataset\pdfs":/app/input ^
-  -v "%cd%\sample_dataset\outputs":/app/output ^
-  --network none ^
+docker run --rm \
+  -v $(pwd)/sample_dataset/pdfs:/app/input:ro \
+  -v $(pwd)/sample_dataset/outputs/challenge1a:/app/output \
+  --network none \
   challenge1a
+
 ```
 >  Output: JSON files stored in sample_dataset/outputs/ with title and outline per PDF.
 
