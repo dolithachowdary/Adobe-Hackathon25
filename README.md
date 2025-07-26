@@ -27,7 +27,7 @@ All solutions are built for **CPU-only environments**, fully **offline**, and co
 - Generate a **structured outline** by analyzing font sizes across the document.
 - Map top font sizes to heading levels (H1, H2, H3) heuristically.
 
-### 🛠 Libraries Used
+###  Libraries Used
 
 - `PyMuPDF` (`fitz`) – for PDF parsing
 - Python 3.10 – language runtime
