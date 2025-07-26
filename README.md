@@ -8,7 +8,7 @@ In a world flooded with documents, what wins is not more content — it's contex
 
 ---
 
-## 📁 Challenge Overview
+##  Challenge Overview
 
 This repository includes solutions to both parts of Round 1:
 
@@ -19,20 +19,20 @@ All solutions are built for **CPU-only environments**, fully **offline**, and co
 
 ---
 
-## 🧠 Challenge 1A – Structured PDF Processing
+##  Challenge 1A – Structured PDF Processing
 
-### 🔍 Approach
+###  Approach
 
 - Extract the **title** from the first page by identifying the largest font size in the top 1/3 of the page.
 - Generate a **structured outline** by analyzing font sizes across the document.
 - Map top font sizes to heading levels (H1, H2, H3) heuristically.
 
-### 🛠️ Libraries Used
+### 🛠 Libraries Used
 
 - `PyMuPDF` (`fitz`) – for PDF parsing
 - Python 3.10 – language runtime
 
-### 🧪 How to Build & Run (Docker)
+###  How to Build & Run (Docker)
 
 
  Navigate to Challenge_1a directory
@@ -52,10 +52,10 @@ docker run --rm ^
   --network none ^
   challenge1a
 ```
-> 📤 Output: JSON files stored in sample_dataset/outputs/ with title and outline per PDF.
+>  Output: JSON files stored in sample_dataset/outputs/ with title and outline per PDF.
 
-## 🧩 Challenge 1B – Multi-Collection Persona-Based PDF Analysis
-### 🔍 Approach
+##  Challenge 1B – Multi-Collection Persona-Based PDF Analysis
+###  Approach
 - Read the persona and task from the input JSON.
 -Analyze all PDFs in the collection.
 -Extract relevant sections by matching heading text and paragraph content with the task.
@@ -78,7 +78,7 @@ cd ../Challenge_1b
 ```
 docker build --platform linux/amd64 -t challenge1b .
 ```
-🏃 Run for Collection 1:
+ Run for Collection 1:
 ```
 docker run --rm ^
   -v "%cd%\Collection 1":/app/input ^
@@ -86,8 +86,8 @@ docker run --rm ^
   --network none ^
   challenge1b
 ```
->📤 Output: challenge1b_output.json in the same collection folder.
->➡️ Repeat for Collection 2 and Collection 3 by changing the volume mount path.
+> Output: challenge1b_output.json in the same collection folder.
+>➡ Repeat for Collection 2 and Collection 3 by changing the volume mount path.
 
 ### 📦 Folder Structure
 ```
@@ -109,9 +109,9 @@ Adobe-India-Hackathon25/
 └── README.md
 ```
 ### ✅ Constraints Satisfied
-- 🔒 Offline execution only — no internet access required
-- 🧠 Pure CPU execution — no GPU dependencies
-- 🐳 Fully containerized using Docker
-- 📤 Deterministic output format matching Adobe's expected schemas
+-  Offline execution only — no internet access required
+-  Pure CPU execution — no GPU dependencies
+-  Fully containerized using Docker
+-  Deterministic output format matching Adobe's expected schemas
 
 > Let’s connect the dots — and redefine how we read.
