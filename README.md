@@ -64,11 +64,11 @@ docker run --rm ^
 -Extracted sections with titles and page numbers
 -Refined subsection content
 
-### 🛠️ Libraries Used
+###  Libraries Used
 - PyMuPDF (fitz) – PDF parsing
 - Standard Python libraries (json, os, re, etc.)
 
-### 🧪 How to Build & Run (Docker)
+###  How to Build & Run (Docker)
  Navigate to Challenge_1b directory
 ```
 cd ../Challenge_1b
