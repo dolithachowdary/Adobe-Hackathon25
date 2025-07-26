@@ -45,6 +45,15 @@ docker build --platform linux/amd64 -t challenge1a .
 ```
 
  Run the container
+ windows:
+```
+docker run --rm `
+  -v "${PWD}\sample_dataset\pdfs:/app/input:ro" `
+  -v "${PWD}\sample_dataset\outputs\challenge1a:/app/output" `
+  --network none `
+  challenge1a
+```
+linux/macOS:
 ```
 docker run --rm \
   -v $(pwd)/sample_dataset/pdfs:/app/input:ro \
@@ -80,9 +89,18 @@ cd ../Challenge_1b
 docker build --platform linux/amd64 -t challenge1b .
 ```
  Run for Collection 1:
+ windows:
 ```
 docker run --rm -v "${PWD}\Collection 1:/app/input:ro" -v "${PWD}\Collection 1:/app/output" --network none challenge1b
 
+```
+linux/macOS:
+```
+docker run --rm \
+  -v "$(pwd)/Collection 1:/app/input:ro" \
+  -v "$(pwd)/Collection 1:/app/output" \
+  --network none \
+  challenge1b
 ```
 > Output: challenge1b_output.json in the same collection folder.
 >➡ Repeat for Collection 2 and Collection 3 by changing the volume mount path.
