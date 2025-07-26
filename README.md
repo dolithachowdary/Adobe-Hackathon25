@@ -80,11 +80,8 @@ docker build --platform linux/amd64 -t challenge1b .
 ```
  Run for Collection 1:
 ```
-docker run --rm ^
-  -v "%cd%\Collection 1":/app/input ^
-  -v "%cd%\Collection 1":/app/output ^
-  --network none ^
-  challenge1b
+docker run --rm -v "${PWD}\Collection 1:/app/input:ro" -v "${PWD}\Collection 1:/app/output" --network none challenge1b
+
 ```
 > Output: challenge1b_output.json in the same collection folder.
 >➡ Repeat for Collection 2 and Collection 3 by changing the volume mount path.
