@@ -106,10 +106,21 @@ docker build --platform linux/amd64 -t challenge1b .
 
 ###  Example Run
 To run analysis for Collection 1, just run:
+- Windows:
 ```
 docker run --rm -v "${PWD}\Collection 1:/app/input:ro" -v "${PWD}\Collection 1:/app/output" --network none challenge1b
-
 ```
+- Linux/macOS:
+```
+docker run --rm \
+  -v "$(pwd)/Collection 1:/app/input:ro" \
+  -v "$(pwd)/Collection 1:/app/output" \
+  --network none \
+  challenge1b
+```
+> Output: challenge1b_output.json in the same collection folder.
+> Repeat for Collection 2 and Collection 3 by changing the volume mount path.
+
 ## Key Features
 - Persona-based content analysis
 - Importance ranking of extracted sections
