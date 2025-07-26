@@ -88,7 +88,7 @@ Challenge_1b/
 }
 ```
 ---
-### ⚙️ How It Works
+###  How It Works
 
 - The script extracts keywords from the job_to_be_done.
 - Each PDF is scanned using PyMuPDF, extracting text block-by-block.
@@ -99,19 +99,16 @@ Challenge_1b/
 ---
 
 ### 🐳 Docker Usage
-🛠️ Build Docker Image
+ Build Docker Image
 ```
 docker build --platform linux/amd64 -t challenge1b .
 ```
 
-### 📌 Example Run
+###  Example Run
 To run analysis for Collection 1, just run:
 ```
-docker run --rm \
-  -v $(pwd)/Challenge_1b/Collection\ 1:/app/input \
-  -v $(pwd)/Challenge_1b/Collection\ 1:/app/output \
-  --network none \
-  challenge1b
+docker run --rm -v "${PWD}\Collection 1:/app/input:ro" -v "${PWD}\Collection 1:/app/output" --network none challenge1b
+
 ```
 ## Key Features
 - Persona-based content analysis
