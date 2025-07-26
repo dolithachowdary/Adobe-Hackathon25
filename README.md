@@ -44,8 +44,8 @@ cd Challenge_1a
 docker build --platform linux/amd64 -t challenge1a .
 ```
 
- Run the container
- windows:
+ Run the container:
+- windows:
 ```
 docker run --rm `
   -v "${PWD}\sample_dataset\pdfs:/app/input:ro" `
@@ -53,7 +53,7 @@ docker run --rm `
   --network none `
   challenge1a
 ```
-linux/macOS:
+- linux/macOS:
 ```
 docker run --rm \
   -v $(pwd)/sample_dataset/pdfs:/app/input:ro \
@@ -89,12 +89,12 @@ cd ../Challenge_1b
 docker build --platform linux/amd64 -t challenge1b .
 ```
  Run for Collection 1:
- windows:
+- windows:
 ```
 docker run --rm -v "${PWD}\Collection 1:/app/input:ro" -v "${PWD}\Collection 1:/app/output" --network none challenge1b
 
 ```
-linux/macOS:
+- linux/macOS:
 ```
 docker run --rm \
   -v "$(pwd)/Collection 1:/app/input:ro" \
