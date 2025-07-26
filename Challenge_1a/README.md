@@ -31,8 +31,7 @@ The task: Convert unstructured PDF documents into meaningful JSON outputs by ext
 ---
 
 ##  How to Build & Run (Docker)
-
-### 1. Navigate to the directory
+1. Navigate to the directory
 
 ```
 cd Challenge_1a
